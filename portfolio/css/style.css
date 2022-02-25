@@ -237,14 +237,26 @@ nav h1 [class*="fa-"]:hover {
     article {
         display: grid;
         /* two equally sized columns */
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(10, 1fr);
         gap: 1rem;
+    }
+
+    #projects img {
+        /* Take up columns 1 to 6 */
+        grid-column: 1/6;
+
+        /* occupy one row with the text*/
+        grid-row: 1/2;
     }
 
     .text {
         /* Make text div come after the image */
         order: 2;
         text-align: right;
+
+        /* take up columns 5 and greater */
+        grid-column: 5/11;
+        grid-row: 1/2;
     }
 
     #projects .technologies {
