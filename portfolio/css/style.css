@@ -48,6 +48,11 @@ a:hover {
     text-decoration: none;
 }
 
+img {
+    /** Allows image to shrink and grow with space */
+    width: 100%;
+}
+
 /* Background color DIV's */
 .section-plum {
     background-color: var(--plum);
@@ -226,6 +231,25 @@ nav h1 [class*="fa-"]:hover {
     border-top: 1px solid var(--aqua);
     border-radius: 25px;
     padding: 1rem;
+}
+
+@media (min-width: 550px) {
+    article {
+        display: grid;
+        /* two equally sized columns */
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .text {
+        /* Make text div come after the image */
+        order: 2;
+        text-align: right;
+    }
+
+    #projects .technologies {
+        justify-content: flex-end;
+    }
 }
 
 /** Responsive */
