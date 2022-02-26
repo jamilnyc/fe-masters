@@ -186,28 +186,28 @@ nav h1 [class*="fa-"]:hover {
 
 /** Projects Section **/
 
-#projects {
+.article-container {
     padding: 4rem 1rem;
     max-width: var(--mx-width);
     margin: 0 auto;
 }
 
-#projects h2 {
+.article-container h2 {
     font-size: 2.5rem;
     margin-bottom: calc(2.5rem * 1.5);
 }
 
-#projects h3 {
+.article-container h3 {
     color: var(--aqua);
 }
 
-#projects h4 {
+.article-container h4 {
     font-size: 1rem;
     font-family: var(--mono);
     margin: 0;
 }
 
-#projects .description {
+.article-container .description {
     background-color: var(--black);
     padding: 1rem;
     border-radius: 10px;
@@ -216,7 +216,7 @@ nav h1 [class*="fa-"]:hover {
     line-height: 1.5;
 }
 
-#projects .technologies {
+.article-container .technologies {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -227,7 +227,7 @@ nav h1 [class*="fa-"]:hover {
     font-size: 1rem;
 }
 
-#projects img {
+.article-container img {
     margin: 2rem 0 4rem 0;
     border-left: 1px solid var(--aqua);
     border-top: 1px solid var(--aqua);
@@ -237,14 +237,14 @@ nav h1 [class*="fa-"]:hover {
 
 
 @media (min-width: 550px) {
-    #projects article {
+    .article-container article {
         display: grid;
         /* two equally sized columns */
         grid-template-columns: repeat(10, 1fr);
         gap: 1rem;
     }
 
-    #projects img {
+    .article-container img {
         /* Take up columns 1 to 6 */
         grid-column: 1/6;
 
@@ -252,7 +252,7 @@ nav h1 [class*="fa-"]:hover {
         grid-row: 1/2;
     }
 
-    #projects .text {
+    .article-container .text {
         /* Make text div come after the image */
         order: 2;
         text-align: right;
@@ -262,21 +262,21 @@ nav h1 [class*="fa-"]:hover {
         grid-row: 1/2;
     }
 
-    #projects .technologies {
+    .article-container .technologies {
         justify-content: flex-end;
     }
 
     /** Left aligned article element **/
-    #projects .reverse .text {
+    .article-container .reverse .text {
         text-align: left;
         grid-column: 1/7;
     }
 
-    #projects .reverse img {
+    .article-container .reverse img {
         grid-column: 6/11;
     }
 
-    #projects .reverse .technologies {
+    .article-container .reverse .technologies {
         justify-content: flex-start;
     }
 }
